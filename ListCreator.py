@@ -10,30 +10,14 @@ def err():
 	print('(2) Close window')
 	err = input()
 
-	if err == 1:
+	if err == ('1'):
 		os.system('cls')
 		list_creator()
-	elif err == 2:
+	elif err == ('2'):
 		sys.exit()
 	else:
 		err()
 
-def text():
-	print("Input your text file's name and extention or the filepath")
-	file = input()
-
-	if file:
-		try: 
-			x = open(file, 'r')
-			while(True):
-				line = x.readline()
-
-				if not line:
-					break
-				print(format.replace(placeholder, line.strip()))
-		except:
-			print('The seems to be missing or cannot be opened. Try again or use the filepath')
-			text()
 def list_creator():
 	try:
 		print('Input your placeholder (1 digit only):')
@@ -64,11 +48,27 @@ def list_creator():
 								for letter in list:
 									print(format.replace(placeholder, letter))
 						elif mode == '2':
-							text()
+							while(True):
+								print("Input your text file's name and extention or the filepath")
+								file = input()
+
+								if file:
+									try: 
+										x = open(file, 'r')
+									except:
+										print('The seems to be missing or cannot be opened. Try again or use the filepath')
+										continue
+									while(True):
+										line = x.readline()
+
+										if not line:
+											break
+										print(format.replace(placeholder, line.strip()))
+									break
 				elif output == '2':
 						print('Select your mode:')
-						print('(1) List mode (each letter of the list is used instead of', placeholder)
-						print('(2) Text mode (each line of text is used instead of', placeholder)
+						print('(1) List mode (each letter of the list is used instead of', placeholder, ')')
+						print('(2) Text mode (each line of text is used instead of', placeholder, ')')
 						mode = input()
 
 						if mode:
@@ -88,7 +88,27 @@ def list_creator():
 												fl.write(format.replace(placeholder, letter))
 												fl.write('\n')
 							elif mode == '2':
-								text()
+								while(True):
+									print("Input your text file's name and extention or the filepath")
+									file = input()
+
+									if file:
+										try: 
+											x = open(file, 'r')
+										except:
+											print('The seems to be missing or cannot be opened. Try again or use the filepath')
+											continue
+										finally:
+											with open('ListCreator.txt', 'w') as fl:
+												pass
+												while(True):
+													line = x.readline()
+												
+													if not line:
+														break
+													fl.write(format.replace(placeholder, line.strip()))
+													fl.write('\n')
+									break
 	except:
 		err()
 
