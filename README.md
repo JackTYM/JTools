@@ -24,8 +24,10 @@ List Creator:
     Anything else unexpected
     
     
-    
-    
+#Statuses
+List Creator: Working
+AsciiArtConverter: Not Working
+CharacterCounter: Half Working (Text file input is broken)
     
     
     
