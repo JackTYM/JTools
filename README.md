@@ -25,9 +25,9 @@ List Creator:
     
     
 #Statuses
-List Creator: Working
+*List Creator: Working
 AsciiArtConverter: Not Working
-CharacterCounter: Half Working (Text file input is broken)
+CharacterCounter: Half Working (Text file input is broken)*
     
     
     
