@@ -1,14 +1,14 @@
 import os
 import sys
 
-def finish():
-    print('Task is finished or an error has occured')
+def err():
+    print('An error has occured')
     print('Please choose an option:')
     print('(1) Return to main menu')
     print('(2) Close window')
     returning = input()
 
-    if returning == 1:
+    if returning == ('1'):
         os.system('cls')
         jtools()
     else:
@@ -20,7 +20,9 @@ def jtools():
     print('(1) List Creator')
     print('(2) Ascii Art Converter')
     print('(3) Character Counter')
-    #print('(3) Multi Program Proccess')
+    print('(4) Random Number Generator')
+    print('(5) Random Word Generator')
+    #print('() Multi Program Proccess')
 
     program = input()
 
@@ -28,13 +30,24 @@ def jtools():
         if program == ('1'):
             os.system('cls')
             import ListCreator
-            finish()
+            err()
         elif program == ('2'):
             os.system('cls')
             import AsciiArtConverter
-            finish()
+            err()
         elif program == ('3'):
             os.system('cls')
             import CharacterCounter
-            finish()
+            err()
+        elif program == ('4'):
+            os.system('cls')
+            import RandomNumber
+            err()
+        elif program == ('5'):
+            os.system('cls')
+            import RandomWord
+            err()
+        else:
+            print('That is not an option!')
+            jtools()
 jtools()
