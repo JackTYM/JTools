@@ -28,6 +28,8 @@ Statuses:
   List Creator: *Working*
   AsciiArtConverter: *Not Working*
   CharacterCounter: *Half Working (Text file input is broken)*
+  Random Number Generator: *Working*
+  Random Word Generator: *Working*
     
     
     
